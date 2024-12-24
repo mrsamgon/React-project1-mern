@@ -13,7 +13,7 @@ import { createWebSocketModuleRunnerTransport } from "vite/module-runner"
 function Home(){
     const [blogs, setBlogs] = useState([])
     const fetchBlogs = async()=>{
-      const response =  await axios.get("http://localhost:3000/blog/")
+      const response =  await axios.get("https://mern3-get.onrender.com/blog/")
       setBlogs(response.data.data)
 
     }

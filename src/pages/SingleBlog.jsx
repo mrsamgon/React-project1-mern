@@ -25,7 +25,7 @@ function SingleBlog() {
 
     const deleteGarneFunction = async () => {
         try {
-            const response = await axios.delete(`http://localhost:3000/blog/${id}`);
+            const response = await axios.delete(`https://mern3-get.onrender.com/blog/${id}`);
             if (response.status === 200) {
                 alert("Deleted successfully");
                 navigate("/");
