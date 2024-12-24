@@ -62,7 +62,7 @@ function CreateBlog(){
     </div>
     </div>
     <div class="">
-      <textarea name="description" id="text" cols="30" rows="10" class="mb-10 h-40 w-full resize-none rounded-md border border-slate-300 p-5 font-semibold text-gray-300" onChange={handleChange}>Description</textarea>
+      <textarea name="description" id="text" cols="30" rows="10" class="mb-10 h-40 w-full resize-none rounded-md border border-slate-300 p-5 font-semibold text-black-300" onChange={handleChange}>Description</textarea>
     </div>
     <div class="text-center">
       <button class="cursor-pointer rounded-lg bg-blue-700 px-8 py-5 text-sm font-semibold text-white">Create Blog</button>
