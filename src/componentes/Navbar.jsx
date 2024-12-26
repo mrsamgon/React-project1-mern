@@ -65,7 +65,7 @@ function Navbar() {
                 <div className="flex space-x-4">
                   <Link
                     to="/create"
-                    className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                    className=" flex rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
                     aria-current="page"
                   >
                     Create Blog

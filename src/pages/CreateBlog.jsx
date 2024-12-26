@@ -26,12 +26,13 @@ function CreateBlog(){
     console.log(data)
 
     const createBlog = async (e)=>{
-        e.preventDefault()
-        const response = await axios.post("https://mern3-get.onrender.com/blog", data, {
-          headers: {
-              "Content-Type": "multipart/form-data",
-          },
-      });
+      e.preventDefault()
+      const response = await axios.post("https://mern3-get.onrender.com/blog/" + id,data,{
+          headers : {
+              "Content-Type" : "multipart/form-data",
+          }
+          })
+      
         if(response.status === 200){
             navigate("/")
 
