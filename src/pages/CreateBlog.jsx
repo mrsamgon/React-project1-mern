@@ -27,7 +27,7 @@ function CreateBlog(){
 
     const createBlog = async (e)=>{
         e.preventDefault()
-        const response = await axios.post("https://mern3-get.onrender.com/blog", formData, {
+        const response = await axios.post("https://mern3-get.onrender.com/blog", data, {
           headers: {
               "Content-Type": "multipart/form-data",
           },
