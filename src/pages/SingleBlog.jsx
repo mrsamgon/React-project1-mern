@@ -15,7 +15,7 @@ function SingleBlog() {
 
     const fetchSingleBlog = async () => {
         try {
-            const response = await axios.get(`http://localhost:3000/blog/${id}`);
+            const response = await axios.get(`https://mern3-get.onrender.com/blog/${id}`);
             console.log("Fetched Blog:", response.data);
             setBlog(response.data.data);
         } catch (error) {
