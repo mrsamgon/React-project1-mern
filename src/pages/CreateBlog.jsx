@@ -25,22 +25,34 @@ function CreateBlog(){
     }
     console.log(data)
 
-    const createBlog = async (e)=>{
-      e.preventDefault()
-      const response = await axios.post("https://mern3-get.onrender.com/blog/" ,data,{
-          headers : {
-              "Content-Type" : "multipart/form-data",
+   
+    const createBlog = async (e) => {
+      e.preventDefault();
+  
+      const formData = new FormData();
+      formData.append("title", data.title);
+      formData.append("subtitle", data.subtitle);
+      formData.append("description", data.description);
+      formData.append("image", data.image);
+  
+      try {
+          const response = await axios.post("https://mern3-get.onrender.com/blog", formData, {
+              headers: {
+                  "Content-Type": "multipart/form-data",
+              },
+          });
+  
+          if (response.status === 200) {
+              navigate("/");
+          } else {
+              alert("Something went wrong!");
           }
-          })
-      
-        if(response.status === 200){
-            navigate("/")
-
-        }else{
-            alert("Something went wrong!")
-        }
-
-    }
+      } catch (error) {
+          console.error("Error creating blog:", error);
+          alert("Failed to create blog. Please try again.");
+      }
+  };
+  
 
     return (
         <>
